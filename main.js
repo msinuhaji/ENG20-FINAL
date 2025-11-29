@@ -54,7 +54,7 @@ const setup3D = () => {
     
     // Load model
     LOADER.load(
-        'models/camera_lens.glb', // Change this to your model filename
+        '/models/camera_lens.glb', // Change this to your model filename
         (gltf) => {
             MODEL = gltf.scene;
             SCENE.add(MODEL);
