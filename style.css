@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Almarai');
+@import url('https://fonts.googleapis.com/css2?family=Inter');
 
 * {
     padding: 0;
@@ -6,25 +6,114 @@
 }
 
 body {
-    background: rgb(15, 15, 15);
+    background: rgb(24, 24, 24);
     overflow: hidden;
+    font-family: 'Inter';
+    color: rgb(209, 209, 209);
     /* padding: 2%; */
 }
 
 h1 {
-    font-family: 'Almarai';
-    font-size: 4em;
+    font-size: 3em;
     letter-spacing: -0.03em;
     font-weight: 600;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    margin-bottom: 5%;
 }
 
+h2 {
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: -0.03em;
+    font-weight:100;
+    hyphens: auto;
+    line-height: 100%;
+    margin-bottom: 1em;
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 135%;
+    font-size: 0.9em;
+}
 
 .page-wrapper {
-    height: 100vh;
+    display: grid;
     width: 100vw;
-    padding: 5%;
+    padding: 4% 5% 4% 20%;
+    height: 100vh;
     box-sizing: border-box;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    grid-template-rows: repeat(11, minmax(0, 1fr));
+    gap: 2%;
+}
+
+.full-size {
+    height: 100%;
+    width: 100%;
+}
+
+.paragraph {
+    hyphens: auto;
+    text-align: justify;
+    text-justify: inter-character;
+}
+
+.parallax-front1 {
+    z-index: 100;
+}
+
+.parallax-behind2 {
+    z-index: -10;
+}
+
+.parallax-img {
+    object-fit: cover; 
+    position: absolute; 
+    background-color: red;
+    top: -20%; 
+    left: 0;
+    z-index: -1;
+    height: 150%; /* Extra height for parallax movement room */
+    width: 100%;
+}
+
+.scrollbar .viewport {
+    position: fixed;
+    top: 50%;
+    left: 10dvw;
+    transform: translateX(-50%) translateY(-50%);
+    height: 12dvh;
+    width: 12dvw;
+    border: 1.5px rgb(189, 189, 189) solid; 
+    z-index: 999;
+}
+
+.scrollbar #scrollContent {
+    position: fixed;
+    top: 50dvh;
+    left: 10dvw;
+    width: 12dvw;
+}
+
+.scrollbar #scrollContent div {
+    height: 12dvh;
+    width: 12dvw;
+    transform: translateX(-50%) translateY(-50%);
+    /* background-color: rgb(34, 34, 34); */
+    border: 1.5px rgb(85, 85, 85) solid; 
+    padding: 5%;
+    font-size: 0.7em;
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
 }
