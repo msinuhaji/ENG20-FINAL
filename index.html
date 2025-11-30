@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>M. Sinuhaji</title>
@@ -8,17 +8,218 @@
 </head>
 
 <body>
-    <script type="module" src="main.js"></script>
-    <div class="page-wrapper">
-        <div style="display: grid; grid-template-columns: repeat(12, 8.333%); grid-template-rows: repeat(14, 7.142%); height: 100%; width: 100%;">
-        <div style="grid-row: 1 / span 5; grid-column: 1 / span 8;">
-            <h1>AN AGE ESTIMATION NEURAL NETWORK</h1>
+    <script src="main.js"></script>
+    <div class="scrollbar">
+        <div class="viewport"></div>
+        <div id="scrollContent">
         </div>
-        <div style="grid-row: 13 / span 14; grid-column: 7 / span 12;">
-            <h1 style="text-align: right;">M. SINUHAJI</h1>
-        </div>
-        <div style="grid-row: 3 / span 10; grid-column: 7 / span 12; background-color: red;" id="container3D"></div>
     </div>
+    <div id="pages">
+        <!-- page one -->
+        <div id='home_page' class="page-wrapper fade" data-fade-sensitivity="1">
+            <div style="grid-row: 1/2; grid-column: 1/4;">
+                <h1 class="parallax-front1">HEY, I'M MUSHTHAFA.</h1>
+            </div>
+            <div style="grid-row: 4/12; grid-column: 2/5;">
+                <h2 class="parallax-front1">I spent the last two months creating my own <i>artificial intelligence</i>.
+                </h2>
+            </div>
+            <div style="grid-row: 11/12; grid-column: 3/4; text-align: right;">
+                Read more about it below.
+            </div>
+            <div style="grid-row: 11/12; grid-column: 4/5;" onclick="navigateToPage('introduction_page')">
+                <h1 style="border: 2px solid white; text-align: center; font-weight: normal;">⇊</h1>
+            </div>
+            <div class="parallax-behind2"
+                style="grid-row: 1/12; grid-column: 5/11; overflow: hidden; position: relative;">
+                <img class="parallax-img"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 9/12; grid-column: 11/12;">
+                <nav>
+                    <a><b><u>Sections</u></b></a>
+                    <a onclick="navigateToPage('introduction_page')">Introduction</a>
+                    <a onclick="navigateToPage('research_page')">Research</a>
+                    <a onclick="navigateToPage('design_page')">Design</a>
+                    <a onclick="navigateToPage('timeline_page')">Timeline</a>
+                    <a onclick="navigateToPage('reflection_page')">Reflection</a>
+                </nav>
+            </div>
+        </div>
+        <!-- page two -->
+        <div id='introduction_page' class="page-wrapper fade" data-fade-sensitivity="1">
+            <div style="grid-row: 1/5; grid-column: 8/10;">
+                <h1 class="parallax-front1" style="hyphens: auto; text-align: right;">INTRO:</h1>
+            </div>
+            <div style="grid-row: 1/4; grid-column: 10/12;">
+                <h2 class="parallax-front1">About me, and about this project.</h2>
+            </div>
+            <div style="grid-row: 4/12; grid-column: 8/12; overflow:hidden">
+                <p>Hi there.</p>
+                <p>I'm Mushthafa Sinuhaji. I've had a keen interest in
+                    computers and math, and software for a while. I even taught myself several programming languages:
+                    currently, I know Javascript, Lua, HTML, CSS, and Python (which I'm forgetting). I've also used PHP
+                    and
+                    C++ in the past.</p>
+                <p>When I first heard that the English final
+                    assignment could be about almost anything, I realized that I had to do something creative
+                    and ambitious (and pretentious). I immediately thought of AI—it would be really interesting, and I
+                    could
+                    ask my dad for help (he did his PhD on Neural Networks for Mining Engineering ~15 years ago,
+                    although he
+                    never finished it).</p>
+                <p>Finally, I decided that I would make an AI that processes images, not some chatbot...</p>
+            </div>
+            <div class="parallax-behind2"
+                style="grid-row: 1/12; grid-column: 1/8; overflow: hidden; position: relative;">
+                <img class="parallax-img"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+        </div>
+        <!-- page three -->
+        <div id="research_page" class="page-wrapper fade" data-fade-sensitivity="0.8"
+            style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+            <div style="grid-row: 1/3; grid-column: 1/2;">
+                <h1 class="parallax-front1">RESEARCH:</h1>
+            </div>
+            <div style="grid-row: 2/3; grid-column: 1/2;">
+                <h2 class="parallax-front1">So, <i>what</i> did I make?</h2>
+            </div>
+            <div style="grid-row: 4/12; grid-column: 1/2; overflow:hidden">
+                <p>...When I said I made an AI, did you think of ChatGPT-like AIs?</p>
+                <p>I don't blame you. It would be really impressive if some random teenager made another
+                    Deepseek. (Unfortunately, you'd need a gazillion dollars to even train the thing.)
+                </p>
+                <p>
+                    But no, I didn't make a chatbot like ChatGPT; I made a Convolutional Neural Network.
+                </p>
+            </div>
+            <div class="parallax-behind2"
+                style="grid-row: 1/7; grid-column: 2/3; overflow: hidden; position: relative;">
+                <img class="parallax-img"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 8/12; grid-column: 2/3; overflow:hidden">
+                <p>
+                    In the world of Machine Learning (where algorithms do tasks without explicit programming to do so),
+                    the
+                    most popular 'archetype' of the AI is the Neural Network.
+                </p>
+                <p>
+                    Essentially, it is an algorithm designed to mimic
+                    a simplified brain using basic processing units, called 'Neurons'.
+                </p>
+            </div>
+            <div style="grid-row: 1/6; grid-column: 3/4; overflow:hidden">
+                <p>
+                    Both ChatGPT-likes and Convolutional Neural Networks are modified types of the Neural Network:
+                </p>
+                <p>
+                    ChatGPT is an LLM (Large Language Model) that is built off Transformer Neural Network, specifically
+                    designed to process language data. On the other hand, CNNs (Convolutional Neural Networks) are the
+                    architecture
+                    that build Image Processing Models such as YOLO or AlexNet, finding patterns within the images.
+                </p>
+            </div>
+            <div class="parallax-behind2"
+                style="grid-row: 6/12; grid-column: 3/4; overflow: hidden; position: relative;">
+                <img class="parallax-img"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+        </div>
+        <!-- page four -->
+        <div id="design_page" class="page-wrapper fade" data-fade-sensitivity="0.8"
+            style="grid-template-columns: repeat(6, minmax(0, 1fr));">
+            <div class="parallax-behind2"
+                style="grid-row: 1/12; grid-column: 1/5; overflow: hidden; position: relative;">
+                <img class="parallax-img"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 1/3; grid-column: 5/6;">
+                <h1 class="parallax-front1">DESIGN:</h1>
+            </div>
+            <div style="grid-row: 2/4; grid-column: 6/7;">
+                <h2 class="parallax-front1">How does it work?</h2>
+            </div>
+            <div style="grid-row: 4/12; grid-column: 5/7;">
+                <p>To understand how my CNN would work, we first have to understand how any Neural Network works:</p>
+                <p>
+                    Simply put, a Neural Network is an arrangement of basic processing units, 'Neurons', into layers in
+                    order to approximate a function; it defines a function without the definition of that
+                    function.
+                </p>
+                <p>
+                    If you imagine a graph as a string that bends and twists, a Neural Network would
+                    be an approximation of that string, with the Neurons doing the bending and twisting.
+                </p>
+                <p>
+                    As previously stated, a CNN is a modified Neural Network. The only major difference is that its made
+                    up of three layers, two of which (CL and FCL) being standalone Neural Networks. You can learn more
+                    about CNNs <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" class="blue-link">here</a>.
+                </p>
+            </div>
+        </div>
+        <!-- page five -->
+        <div id="timeline_page" class="page-wrapper fade" data-fade-sensitivity="0.8"
+            style="grid-template-columns: repeat(6, minmax(0, 1fr));">
+            <div class="parallax-behind2"
+                style="grid-row: 1/12; grid-column: 1/5; overflow: hidden; position: relative;">
+                <img class="parallax-img"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 1/3; grid-column: 5/6;">
+                <h1 class="parallax-front1">DESIGN:</h1>
+            </div>
+            <div style="grid-row: 2/4; grid-column: 6/7;">
+                <h2 class="parallax-front1">How does it work?</h2>
+            </div>
+            <div style="grid-row: 4/12; grid-column: 5/7;">
+                <p>To understand how my CNN would work, we first have to understand how any Neural Network works:</p>
+                <p>
+                    Simply put, a Neural Network is an arrangement of basic processing units, 'Neurons', into layers in
+                    order to approximate a function; it defines a function without the definition of that
+                    function.
+                </p>
+                <p>
+                    If you imagine a graph as a string that bends and twists, a Neural Network would
+                    be an approximation of that string, with the Neurons doing the bending and twisting.
+                </p>
+                <p>
+                    As previously stated, a CNN is a modified Neural Network. The only major difference is that its made
+                    up
+                    of three layers, two of which (the Convolutional Layer and the FCL) being standalone Neural
+                    Networks.
+                </p>
+            </div>
+        </div>
+        <!-- page six -->
+        <div id="reflection_page" class="page-wrapper fade" data-fade-sensitivity="0.8"
+            style="grid-template-columns: repeat(6, minmax(0, 1fr));">
+            <div class="parallax-behind2"
+                style="grid-row: 1/12; grid-column: 1/5; overflow: hidden; position: relative;">
+                <img class="parallax-img"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 1/3; grid-column: 5/6;">
+                <h1 class="parallax-front1">DESIGN:</h1>
+            </div>
+            <div style="grid-row: 2/4; grid-column: 6/7;">
+                <h2 class="parallax-front1">How does it work?</h2>
+            </div>
+            <div style="grid-row: 4/12; grid-column: 5/7;">
+                <p>To understand how my CNN would work, we first have to understand how any Neural Network works:</p>
+                <p>
+                    Simply put, a Neural Network is an arrangement of basic processing units, 'Neurons', into layers in
+                    order to approximate a function; it defines a function without the definition of that
+                    function.
+                </p>
+                <p>
+                    If you imagine a graph as a string that bends and twists, a Neural Network would
+                    be an approximation of that string, with the Neurons doing the bending and twisting.
+                </p>
+                
+            </div>
+        </div>
     </div>
 
 </body>
