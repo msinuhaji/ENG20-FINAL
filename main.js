@@ -4,6 +4,8 @@ function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
+console.log(isMobile());
+
 document.addEventListener('DOMContentLoaded', () => {
     if (!isMobile()) {
         let currentScroll = window.pageYOffset;
@@ -110,7 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
             documentText.push(element.innerText);
         });
 
-        const pagesDiv = document.getElementById('pages');
+        document.body.style.overflow = 'scroll';
+
+        const pagesDiv = document.body;
         if (pagesDiv) {
             pagesDiv.innerHTML = '<div style="padding: 20px; font-family: Arial, sans-serif;">' + 
                 documentText.map(text => `<p>${text}</p>`).join('') + 
