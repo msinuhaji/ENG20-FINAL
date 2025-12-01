@@ -1,10 +1,9 @@
 const LERP = (s, e, a) => s + (e - s) * a;
 
 function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Samsung/i.test(navigator.userAgent) || 
+           (navigator.maxTouchPoints && navigator.maxTouchPoints > 2);
 }
-
-console.log(isMobile());
 
 document.addEventListener('DOMContentLoaded', () => {
     if (!isMobile()) {
@@ -112,9 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             documentText.push(element.innerText);
         });
 
-        document.body.style.overflow = 'scroll';
-
-        const pagesDiv = document.body;
+        const pagesDiv = document.getElementById('pages');
         if (pagesDiv) {
             pagesDiv.innerHTML = '<div style="padding: 20px; font-family: Arial, sans-serif;">' + 
                 documentText.map(text => `<p>${text}</p>`).join('') + 
