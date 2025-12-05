@@ -9,10 +9,18 @@
 
 <body>
     <script src="main.js"></script>
-    <div class="scrollbar">
-        <div class="viewport"></div>
-        <div id="scrollContent">
-        </div>
+    <div class="scrollbar-viewport"></div>
+    <div id="scrollContent">
+        <div>home</div>
+        <div>introduction</div>
+        <div>planning</div>
+        <div>research_one</div>
+        <div>research_two</div>
+        <div>structure</div>
+        <div>timeline_sept</div>
+        <div>timeline_oct</div>
+        <div>timeline_nov</div>
+        <div>reflection</div>
     </div>
     <div id="pages">
         <!-- page one -->
@@ -30,9 +38,9 @@
             <div style="grid-row: 11/12; grid-column: 4/5;" onclick="navigateToPage('introduction_page')">
                 <h1 style="border: 2px solid white; text-align: center; font-weight: normal;">⇊</h1>
             </div>
-            <div class="parallax-behind2"
+            <div class="parallax-behind3"
                 style="grid-row: 1/12; grid-column: 5/11; overflow: hidden; position: relative;">
-                <img class="parallax-img1"
+                <img class="parallax-behind2"
                     src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
             </div>
             <div style="grid-row: 9/12; grid-column: 11/12;">
@@ -40,7 +48,7 @@
                     <a><b><u>Sections</u></b></a>
                     <a onclick="navigateToPage('introduction_page')">Intro</a>
                     <a onclick="navigateToPage('research_page')">Research</a>
-                    <a onclick="navigateToPage('strucutre_page')">Structure</a>
+                    <a onclick="navigateToPage('structure_page')">Structure</a>
                     <a onclick="navigateToPage('timeline_page')">Timeline</a>
                     <a onclick="navigateToPage('reflection_page')">Reflection</a>
                 </nav>
@@ -54,30 +62,47 @@
             <div style="grid-row: 1/4; grid-column: 10/12;">
                 <h2 class="parallax-front1">About me, and about this project.</h2>
             </div>
-            <div style="grid-row: 4/12; grid-column: 8/12; overflow:hidden" class="mobile-data-div">
-                <p>Hi there.</p>
-                <p>I'm Mushthafa Sinuhaji. I've had a keen interest in
+            <div style="grid-row: 4/12; grid-column: 8/12; overflow:hidden">
+                <p class="mobile-data-div">
+                    Hi there.
+                </p>
+                <p class="mobile-data-div">I'm Mushthafa Sinuhaji. I've had a keen interest in
                     computers, math, and software for a while. I even taught myself several programming languages:
                     currently, I know Javascript, Lua, HTML, CSS, and Python (which I'm forgetting). I've also used PHP
                     and
                     C++ in the past.</p>
-                <p>When I first heard that the English final
+                <p class="mobile-data-div">When I first heard that the English final
                     assignment could be about almost anything, I realized that I had to do something creative
                     and ambitious (and pretentious). I immediately thought of AI—it would be really interesting, and I
                     could
                     ask my dad for help (he did his PhD on Neural Networks for Mining Engineering ~15 years ago,
                     although he
                     never finished it).</p>
-                <p>In the end, I decided that I would make an AI that processes images, not some chatbot...</p>
+                <p class="mobile-data-div">In the end, I decided that I would make an AI that processes images, not some
+                    chatbot...</p>
             </div>
             <div class="parallax-behind2"
                 style="grid-row: 1/12; grid-column: 1/8; overflow: hidden; position: relative;">
-                <img class="parallax-img1"
+                <img
                     src="https://britishcolumbia.com/wp-content/uploads/2024/11/5c0eb9a0-ebc2-4b01-a516-c1002b169341-scaled.jpeg">
             </div>
         </div>
         <!-- page three -->
-        <div id="research_page" class="page-wrapper fade" data-fade-sensitivity='1.1'
+        <div id="planning_page" class="page-wrapper fade" data-fade-sensitivity='1.1'
+            style="grid-template-columns: repeat(5, minmax(0, 1fr));" data-snap-distance="450">
+            <div style="grid-row: 1/3; grid-column: 1/3;">
+                <h1 class="parallax-front1">PLANNING:</h1>
+            </div>
+            <div style="grid-row: 2/4; grid-column: 1/3;">
+                <h2 class="parallax-front1">Success Criteria and Project Proposal</h2>
+            </div>
+            <div style="grid-row: 1/12; grid-column: 3/6 ;">
+                <iframe style="height: 100%; width: 100%;"
+                    src="https://docs.google.com/document/d/e/2PACX-1vRIGJMZoe1FHIG80JOXOTVTX6ky9wNcuwYCMsf6TvnoJfioqPtn_oyjksm7w_NlmiozXLGqm4AaXQdV/pub?embedded=true"></iframe>
+            </div>
+        </div>
+        <!-- page four -->
+        <div id="research_page_one" class="page-wrapper fade" data-fade-sensitivity='1.1'
             style="grid-template-columns: repeat(3, minmax(0, 1fr));" data-snap-distance="450">
             <div style="grid-row: 1/3; grid-column: 1/2;">
                 <h1 class="parallax-front1">RESEARCH:</h1>
@@ -85,54 +110,114 @@
             <div style="grid-row: 2/3; grid-column: 1/2;">
                 <h2 class="parallax-front1">So, <i>what</i> did I make?</h2>
             </div>
-            <div style="grid-row: 4/12; grid-column: 1/2; overflow:hidden" class="mobile-data-div">
-                <p>...When I said I made an AI, did you think of ChatGPT-like AIs?</p>
-                <p>I don't blame you. It would be really impressive if some random teenager made another
+            <div style="grid-row: 4/8; grid-column: 1/2; overflow:hidden">
+                <p class="mobile-data-div">...When I said I made an AI, did you think of ChatGPT-like AIs?</p>
+                <p class="mobile-data-div">I don't blame you. It would be really impressive if some random teenager made
+                    another
                     Deepseek. (Unfortunately, you'd need a gazillion dollars to even train the thing.)
                 </p>
-                <p>
+                <p class="mobile-data-div">
                     But no, I didn't make a chatbot like ChatGPT; I made a Convolutional Neural Network.
                 </p>
             </div>
-            <div class="parallax-behind2"
-                style="grid-row: 1/7; grid-column: 2/3; overflow: hidden; position: relative;">
-                <img class="parallax-img1"
-                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            <div class="parallax-front2" style="grid-row: 1/7; grid-column: 2/3; overflow: hidden; position: relative;">
+                <img class="parallax-behind3 image-centred" src="https://i.sstatic.net/pxISb.png">
             </div>
-            <div style="grid-row: 8/12; grid-column: 2/3; overflow:hidden" class="mobile-data-div">
-                <p>
+            <div style="grid-row: 8/12; grid-column: 2/3; overflow:hidden">
+                <p class="mobile-data-div">
                     In the world of Machine Learning (where algorithms do tasks without explicit programming to do so),
                     the
                     most popular 'archetype' of the AI is the Neural Network.
                 </p>
-                <p>
+                <p class="mobile-data-div">
                     Essentially, it is an algorithm designed to mimic
                     a simplified brain using basic processing units, called 'Neurons'.
                 </p>
             </div>
-            <div style="grid-row: 1/6; grid-column: 3/4; overflow:hidden" class="mobile-data-div">
-                <p>
+            <div style="grid-row: 1/6; grid-column: 3/4; overflow:hidden">
+                <p class="mobile-data-div">
                     Both ChatGPT-likes and Convolutional Neural Networks are modified types of the Neural Network:
                 </p>
-                <p>
+                <p class="mobile-data-div">
                     ChatGPT is an LLM (Large Language Model) that is built off Transformer Neural Network, specifically
                     designed to process language data. On the other hand, CNNs (Convolutional Neural Networks) are the
                     architecture
                     that build Image Processing Models such as YOLO or AlexNet, finding patterns within the images.
                 </p>
             </div>
-            <div class="parallax-behind2"
+            <div class="parallax-front1"
                 style="grid-row: 6/12; grid-column: 3/4; overflow: hidden; position: relative;">
-                <img class="parallax-img1"
-                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+                <img class="parallax-behind2 image-centred"
+                    src="https://mindy-support.com/wp-content/uploads/2024/10/how-the-yolo-algorithm-works.png">
             </div>
         </div>
-        <!-- page four -->
+        <!-- page five -->
+        <div id="research_page_two" class="page-wrapper fade" data-fade-sensitivity='1.1'
+            style="grid-template-columns: repeat(3, minmax(0, 1fr));" data-snap-distance="450">
+            <div style="grid-row: 1/3; grid-column: 1/2;">
+                <h1 class="parallax-front1">RESEARCH:</h1>
+            </div>
+            <div style="grid-row: 2/5; grid-column: 1/2;">
+                <h2 class="parallax-front1">More in depth...</h2>
+                <p>This is what I wrote early into the project, during the "IS Research Plan - Passion and Perseverance
+                    Project."</p>
+            </div>
+            <div
+                style="grid-row: 5/12; grid-column: 1/2; overflow:hidden; border: 1px white solid; padding: 5%; box-sizing: border-box;">
+                <p>Works Cited</p>
+                <p class="mobile-data-div">
+                    “An On-Device Deep Neural Network for Face Detection.” Apple Machine Learning Research,
+                    machinelearning.apple.com. Accessed 10 Oct. 2025.
+                </p>
+                <p class="mobile-data-div">
+                    Lee, Fangfang. “What Is a Neural Network?” IBM, 15 Sept. 2025,
+                    www.ibm.com.
+                </p>
+                <p class="mobile-data-div">
+                    “Yolo : You Only Look Once - Real Time Object Detection.” GeeksforGeeks, GeeksforGeeks, 3 July 2025,
+                    www.geeksforgeeks.org.
+                </p>
+            </div>
+            <div style="grid-row: 1/12; grid-column: 2/3; overflow:hidden">
+                <p class="mobile-data-div">"A neural network is an algorithm that can do machine learning (approximate a
+                    function without explicitly writing the definition of the function; when a computer teaches itself
+                    to do something). A neural network does this by using small processing units called ‘Neurons’,
+                    inspired by the real-life neurons found within the brain. ‘Neurons’ are organized in multiple
+                    layers, starting with an input layer, through ‘hidden’ layers, then finally to an output layer. The
+                    process of running a neural network uses Forward Propagation (where data is passed forward
+                    layer-by-layer), and the process of training/teaching the neural network uses Back Propagation
+                    (where the output of the algorithm is measured to see how much to change the biases of the neurons)
+                    (Fangfang). Neural networks are useful in situations where it is difficult to set a concrete,
+                    mathematical definition, such as facial detection.
+                </p>
+            </div>
+            <div style="grid-row: 1/7; grid-column: 3/4; overflow:hidden">
+                <p class="mobile-data-div">
+                    "In the Apple Article, the researchers explained how and why they changed neural network types, and
+                    challenges they faced when creating a facial detection neural network. They explained that when they
+                    created a facial detection algorithm for the iPhone, they needed an easy-to-use and responsive
+                    algorithm that could be implemented on the phone itself. Thus, they explained how they manually
+                    designed their own algorithm to run efficiently and accurately, showing the details of the project
+                    (Apple Machine Learning Research). In many ways, they showed how it was similar to the You Only
+                    Look Once algorithm.
+                </p>
+            </div>
+            <div style="grid-row: 7/12; grid-column: 3/4; overflow:hidden">
+                <p class="mobile-data-div">
+                    "The You Only Look Once algorithm (YOLO) is one of the most responsive, accurate, and lightweight
+                    algorithms in use currently. It is based on old CNNs (Convolutional Neural Networks), algorithms
+                    which can detect patterns in images. The article shows how to make one and how YOLO algorithms work
+                    (Geeksforgeeks)."
+                </p>
+            </div>
+        </div>
+        <!-- page six -->
         <div id="structure_page" class="page-wrapper fade" data-fade-sensitivity='1.1'
             style="grid-template-columns: repeat(6, minmax(0, 1fr));" data-snap-distance="450">
             <div class="parallax-behind2"
                 style="grid-row: 3/12; grid-column: 3/7; overflow: hidden; position: relative;">
-                <img class="parallax-img2" style="filter: grayscale(30%) contrast(70%) brightness(105%);" src="images/CNN Diagram.png">
+                <img style="filter: grayscale(30%) contrast(70%) brightness(105%); top: -25%" class="image-centred"
+                    src="images/CNN Diagram.png">
             </div>
             <div style="grid-row: 1/2; grid-column: 1/2;">
                 <h1 class="parallax-front1">STRUCTURE:</h1>
@@ -140,29 +225,29 @@
             <div style="grid-row: 2/4; grid-column: 1/3;">
                 <h2 class="parallax-front1">How does it work?</h2>
             </div>
-            <div style="grid-row: 4/12; grid-column: 1/3;" class="mobile-data-div">
-                <p>To understand how my CNN would work, we first have to understand how any Neural Network works:</p>
-                <p>
+            <div style="grid-row: 4/12; grid-column: 1/3;">
+                <p class="mobile-data-div">To understand how my CNN would work, we first have to understand how any
+                    Neural Network works:</p>
+                <p class="mobile-data-div">
                     Simply put, a Neural Network is an arrangement of basic processing units, 'Neurons', into layers in
                     order to approximate a function; it defines a function without the definition of that
                     function.
                 </p>
-                <p>
-                    If you imagine a graph as a string that bends and twists, a Neural Network would
-                    be an approximation of that string, with the Neurons doing the bending and twisting.
-                </p>
-                <p>
+                <p class="mobile-data-div">
                     As previously stated, a CNN is a modified Neural Network. The only major difference is that its made
-                    up of three layers, two of which (CL and FCL) being standalone Neural Networks. This is shown in the
-                    diagram I made on the right (seen on desktop version).
+                    up of three layers, two of which (Convolutional Layer and Fully-Connected Layer) being standalone
+                    Neural Networks. This is shown in the
+                    diagram on the right (only seen on desktop version).
                 </p>
             </div>
             <div style="grid-row: 1/4; grid-column: 3/4;">
-                <p style="text-align: right;" class="subtext">As seen here in the diagram below, a CNN is comprised of three layers: CL,
+                <p style="text-align: right;" class="subtext">As seen here in the diagram below, a CNN is comprised of
+                    three layers: CL,
                     Pooling, and FCL.</p>
             </div>
             <div style="grid-row: 1/4; grid-column: 4/5;">
-                <p style="text-align: right;" class="subtext">The CL is a modified Neural Network, where each neuron can't see of the
+                <p style="text-align: right;" class="subtext">The CL is a modified Neural Network, where each neuron
+                    can't see of the
                     previous layer; this layer specializes in feature extraction.</p>
             </div>
             <div style="grid-row: 1/4; grid-column: 5/6;">
@@ -175,63 +260,143 @@
             </div>
         </div>
         <!-- page five -->
-        <div id="timeline_page" class="page-wrapper fade" data-fade-sensitivity='1.1'
+        <div id="timeline_page_one" class="page-wrapper fade" data-fade-sensitivity='1.1'
             style="grid-template-columns: repeat(6, minmax(0, 1fr));" data-snap-distance="450">
-            <div class="parallax-behind2"
-                style="grid-row: 1/12; grid-column: 1/5; overflow: hidden; position: relative;">
-                <img class="parallax-img1"
+            <div class="parallax-front2" style="grid-row: 1/8; grid-column: 1/3; overflow: hidden; position: relative;">
+                <img class="parallax-behind1"
                     src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
             </div>
-            <div style="grid-row: 1/3; grid-column: 5/6;">
-                <h1 class="parallax-front1">DESIGN:</h1>
+            <div style="grid-row: 8/12; grid-column: 1/3; overflow: hidden;">
+                <p><i>(2025/9/5 – 2025/9/12)</i></p>
+                <p>I began the project by researching the math I would need to know to do the project (derivatives,
+                    sets, tensors, partial differentiation, etc.); a large majority of my studying was done before I
+                    planned the algorithm itself!</p>
+                <p>Then I planned my project, with the goal to create a CNN from scratch.</p>
             </div>
-            <div style="grid-row: 2/4; grid-column: 6/7;">
-                <h2 class="parallax-front1">How does it work?</h2>
+            <div style="grid-row: 2/6; grid-column: 3/5; overflow: hidden;">
+                <p><i>(2025/9/12 – 2025/9/26)</i></p>
+                <p>I created two non-convolutional neural networks in this period, primarily copying the code of people
+                    online. One would be a simple colour-labelling algorithm, and the other would be a function
+                    estimation algorithm. (The latter would also be a failure.) These mini-projects taught me about the
+                    basics of neural networks and showed my future direction.</p>
             </div>
-            <div style="grid-row: 4/12; grid-column: 5/7;" class="mobile-data-div">
-                <p>To understand how my CNN would work, we first have to understand how any Neural Network works:</p>
-                <p>
-                    Simply put, a Neural Network is an arrangement of basic processing units, 'Neurons', into layers in
-                    order to approximate a function; it defines a function without the definition of that
-                    function.
-                </p>
-                <p>
-                    If you imagine a graph as a string that bends and twists, a Neural Network would
-                    be an approximation of that string, with the Neurons doing the bending and twisting.
-                </p>
-                <p>
-                    As previously stated, a CNN is a modified Neural Network. The only major difference is that its made
-                    up
-                    of three layers, two of which (the Convolutional Layer and the FCL) being standalone Neural
-                    Networks.
-                </p>
+            <div class="parallax-front4"
+                style="grid-row: 6/12; grid-column: 3/5; overflow: hidden; position: relative;">
+                <img class="parallax-behind3"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 1/2; grid-column: 5/7;">
+                <h1 class="parallax-front1">TIMELINE:</h1>
+            </div>
+            <div style="grid-row: 2/3; grid-column: 5/7;">
+                <h2 class="parallax-front1">September Period</h2>
+            </div>
+            <div style="grid-row: 3/12; grid-column: 5/7;">
+                <p class="parallax-front4">What went on in my project from September 5 to September 26.</p>
             </div>
         </div>
         <!-- page six -->
-        <div id="reflection_page" class="page-wrapper fade" data-fade-sensitivity='1.1'
+        <div id="timeline_page_two" class="page-wrapper fade" data-fade-sensitivity='1.1'
             style="grid-template-columns: repeat(6, minmax(0, 1fr));" data-snap-distance="450">
-            <div class="parallax-behind2"
-                style="grid-row: 1/12; grid-column: 1/5; overflow: hidden; position: relative;">
-                <img class="parallax-img1"
+            <div class="parallax-front2" style="grid-row: 1/8; grid-column: 1/3; overflow: hidden; position: relative;">
+                <img class="parallax-behind1"
                     src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
             </div>
-            <div style="grid-row: 1/3; grid-column: 5/6;">
-                <h1 class="parallax-front1">DESIGN:</h1>
+            <div style="grid-row: 8/12; grid-column: 1/3; overflow: hidden;">
+                <p><i>(2025/10/3 – 2025/10/10)</i></p>
+                <p>Here, I looked at my mistakes when I created my small-scale neural networks, including why my
+                    color-labelling program worked, while my regression neural network failed. During these dates, I
+                    developed updates for both (but I'll admit, I was too lazy to fix the regression algorithm).</p>
+                <p>I also extensively learned about the chain rule in calculus, and the inner algorithms working to
+                    create the network. I also learned the basics about convolutional neural networks.</p>
             </div>
-            <div style="grid-row: 2/4; grid-column: 6/7;">
-                <h2 class="parallax-front1">How does it work?</h2>
+            <div style="grid-row: 2/6; grid-column: 3/5; overflow: hidden;">
+                <p><i>(2025/10/10 – 2025/10/31)</i></p>
+                <p>During this period, I researched regarding CNNs, thinking to create a Convolutional Neural Network
+                    which categorizes whether the image given has a cat in it. However, I then thought this would be...
+                    kindof boring... so I decided to change it into an age estimation process.</p>
+
             </div>
-            <div style="grid-row: 4/12; grid-column: 5/7;" class="mobile-data-div">
-                <p>To understand how my CNN would work, we first have to understand how any Neural Network works:</p>
-                <p>
-                    Simply put, a Neural Network is an arrangement of basic processing units, 'Neurons', into layers in
-                    order to approximate a function; it defines a function without the definition of that
-                    function.
+            <div class="parallax-front4"
+                style="grid-row: 6/12; grid-column: 3/5; overflow: hidden; position: relative;">
+                <img class="parallax-behind3"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 1/2; grid-column: 5/7;">
+                <h1 class="parallax-front1">TIMELINE:</h1>
+            </div>
+            <div style="grid-row: 2/3; grid-column: 5/7;">
+                <h2 class="parallax-front1">October Period</h2>
+            </div>
+            <div style="grid-row: 3/12; grid-column: 5/7;">
+                <p class="parallax-front4">What went on in my project from October 3 to October 31.</p>
+            </div>
+        </div>
+        <!-- page seven -->
+        <div id="timeline_page_three" class="page-wrapper fade" data-fade-sensitivity='1.1'
+            style="grid-template-columns: repeat(6, minmax(0, 1fr));" data-snap-distance="450">
+            <div class="parallax-front2" style="grid-row: 1/8; grid-column: 1/3; overflow: hidden; position: relative;">
+                <img class="parallax-behind1"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 8/12; grid-column: 1/3; overflow: hidden;">
+                <p><i>(2025/11/7 – 2025/11/21)</i></p>
+                <p>In this period, I realized I needed to know more about the basic fundamentals needed to create the
+                    final network, so I taught myself about that via Khan Academy and others: what gradients are,
+                    partial derivatives and especially the chain rule and why it works. Finally, I began the final
+                    project and finished forwards propagation (the architecture of the network.)</p>
+            </div>
+            <div style="grid-row: 2/6; grid-column: 3/5; overflow: hidden;">
+                <p><i>(2025/11/21 – 2025/12/5)</i></p>
+                <p>Finally, I crunched the website in a few days, finished the training code of the network, got usable
+                    training data (UTK Face Dataset), and tidied things up. While I still haven't tested it, this
+                    project would still be a major success regardless of the actual outcome of my code.</p>
+
+            </div>
+            <div class="parallax-front4"
+                style="grid-row: 6/12; grid-column: 3/5; overflow: hidden; position: relative;">
+                <img class="parallax-behind3"
+                    src="https://wallpapers.com/images/high/silly-cat-pictures-1200-x-900-55sismdj8cnvvg3t.webp">
+            </div>
+            <div style="grid-row: 1/2; grid-column: 5/7;">
+                <h1 class="parallax-front1">TIMELINE:</h1>
+            </div>
+            <div style="grid-row: 2/3; grid-column: 5/7;">
+                <h2 class="parallax-front1">November Period</h2>
+            </div>
+            <div style="grid-row: 3/12; grid-column: 5/7;">
+                <p class="parallax-front4">What went on in my project from November 7 to December 5.</p>
+            </div>
+        </div>
+        <!-- page eight -->
+        <div id="reflection_page" class="page-wrapper fade" data-fade-sensitivity='1.1'
+            style="grid-template-columns: repeat(6, minmax(0, 1fr));" data-snap-distance="450">
+            <div style="grid-row: 1/3; grid-column: 1/6;">
+                <h1 class="parallax-front1">REFLECTION:</h1>
+            </div>
+            <div style="grid-row: 2/4; grid-column: 1/7;">
+                <h2 class="parallax-front1">In the end, what did I do?</h2>
+            </div>
+            <div style="grid-row: 4/12; grid-column: 1/7;" class="mobile-data-div">
+                <p class="mobile-data-div">In the end, I successfully met my criteria (...ish, at the time of writing
+                    I've written working structure but I haven't actually tested it altogether). Either way, I learned
+                    multiple things through this project, each one making the project worthwhile.
                 </p>
-                <p>
-                    If you imagine a graph as a string that bends and twists, a Neural Network would
-                    be an approximation of that string, with the Neurons doing the bending and twisting.
-                </p>
+                <p class="mobile-data-div">Through this project, I've directly learned about various mathematical
+                    concepts: sets, tensors (scalars, vectors, and matrices), matrix multiplication and elementwise
+                    multiplication, derivatives and differentiation, gradients (partial derivatives), the chain rule,
+                    the two kinds of autodifferentiation (analytical and finite difference), neural network structures,
+                    forward propagation, and backward propagation, just to name a few. (Mind you, the most I knew about
+                    maths was linear equations!)</p>
+                <p class="mobile-data-div">In addition, I've cultivated my other skills in more indirect ways, advancing
+                    my perseverance, patience, and creativity. This project has tested me alot, and I've needed alot of
+                    patience in order to even begin to debug my code. This internally forced my persevering skills to
+                    develop for me to actually <i>finish</i> project. Finally, I required creativity to design the
+                    algorithm and to be able to put the building blocks (functions, neurons, etc.) together.</p>
+                <p class="mobile-data-div">To conclude, this project has tested me, pushing my creative,
+                    problem-solving, and mathematical skills. My takeaway: the difficult aspect to
+                    programming is not the code itself, nor the design of the algorithm, but instead the way the code
+                    forces you to to think about the most miniscule details, and how they add up to the big picture.</p>
 
             </div>
         </div>
