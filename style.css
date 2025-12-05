@@ -41,7 +41,7 @@ nav {
     align-items: end;
 }
 
-p {
+p, li, ol, ul {
     margin-bottom: 1em;
     line-height: 135%;
     font-size: 0.9em;
@@ -50,6 +50,7 @@ p {
 p.subtext {
     color: rgb(85, 85, 85);
     font-size: 0.7em;
+    z-index: 1000;
 }
 
 .page-wrapper {
@@ -61,6 +62,14 @@ p.subtext {
     grid-template-columns: repeat(11, minmax(0, 1fr));
     grid-template-rows: repeat(11, minmax(0, 1fr));
     gap: 2%;
+}
+
+.mobile-version {
+    padding: 5% 10% 5% 5%;
+    font-size: 4em;
+    color: #fff;
+    margin-bottom: 4em;
+    letter-spacing: -0.04em;
 }
 
 .full-size {
@@ -78,22 +87,26 @@ p.subtext {
     z-index: 100;
 }
 
-.parallax-behind2 {
-    z-index: -10;
+.parallax-behind1, .parallax-behind2 {
+    z-index: -999;
 }
 
-.parallax-img1, .parallax-img2 {
+.image-centred {
     object-fit: cover; 
     position: absolute; 
     background-color: red;
-    top: -25%; 
+    top: -5%; 
     left: 0;
     z-index: -1;
     height: 160%; /* Extra height for parallax movement room */
     width: 100%;
 }
 
-.scrollbar .viewport {
+.scrollbar {
+    position: fixed;
+}
+
+.scrollbar-viewport {
     position: fixed;
     top: 50%;
     left: 10dvw;
@@ -104,21 +117,32 @@ p.subtext {
     z-index: 999;
 }
 
-.scrollbar #scrollContent {
+#scrollContent {
+    pointer-events: none;
     position: fixed;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     top: 50dvh;
     left: 10dvw;
     width: 12dvw;
 }
 
-.scrollbar #scrollContent div {
+#scrollContent div {
+    transform: translateY(-50%);
+    z-index: 9999;
+    pointer-events: all;
     height: 12dvh;
     width: 12dvw;
-    transform: translateX(-50%) translateY(-50%);
     /* background-color: rgb(34, 34, 34); */
     border: 1.5px rgb(85, 85, 85) solid; 
     padding: 5%;
     font-size: 0.7em;
     box-sizing: border-box;
     color: rgb(85, 85, 85);
+}
+
+#pages, .parallax-front1, .parallax-front2, .parallax-behind1, #scrollContent {
+    will-change: transform;
 }
